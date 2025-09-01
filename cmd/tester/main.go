@@ -73,5 +73,4 @@ func main() {
 	} else {
 		panic("No File")
 	}
-
 }

@@ -43,5 +43,4 @@ func main() {
 	}
 
 	fmt.Printf("\n\n%s\n\n", rs)
-
 }

@@ -69,9 +69,7 @@ func main() {
 			writeFile(v)
 		}
 		inf.Close()
-
 	}
-
 }
 
 func writeFile(ml string) {
@@ -95,7 +93,6 @@ func writeFile(ml string) {
 	} else {
 		fmt.Printf("Skipping: %s\n", fname)
 	}
-
 }
 
 func printHelp(msg string) {
@@ -106,5 +103,4 @@ func printHelp(msg string) {
 	fmt.Println("-i\t\tInput Directory for QTI Item XML Files")
 	fmt.Println("-o\t\tOutput Directory for MathML XML Files")
 	fmt.Println("-h\t\tPrint Help")
-
 }

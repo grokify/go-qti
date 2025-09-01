@@ -20,7 +20,6 @@ func main() {
 	flag.Parse()
 	doItem()
 	//doItemDom()
-	return
 }
 
 func doItem() {
@@ -75,7 +74,6 @@ func doItem() {
 
 	b, err := xml.Marshal(ir)
 	fmt.Printf("%s\n", b)
-
 }
 
 func doItemDom() {
