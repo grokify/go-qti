@@ -9,7 +9,7 @@ import (
 	"path"
 	"strings"
 
-	"github.com/grokify/go-qti"
+	"github.com/grokify/go-qti/assessmentitem"
 )
 
 var (
@@ -55,7 +55,7 @@ func main() {
 			panic(err)
 		}
 
-		it, err := qti.NewItem(infd)
+		it, err := assessmentitem.NewAssessmentItem(infd)
 		if err != nil {
 			panic(err)
 		}
