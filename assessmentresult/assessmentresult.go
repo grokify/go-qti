@@ -2,7 +2,8 @@ package assessmentresult
 
 import (
 	"encoding/xml"
-	"github.com/stmath/go-qti"
+
+	"github.com/grokify/go-qti"
 )
 
 // ItemVariable. https://www.imsglobal.org/question/qtiv2p2p1/QTIv2p2-Results-InfoBindModelv1p0p1/imsqtiv2p2_result_v1p0_InfoBindv1p0p1.html#Abstract_ItemVariable

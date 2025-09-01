@@ -69,7 +69,7 @@ func (tr *ItemResult) UnmarshalXML(d *xml.Decoder, start xml.StartElement) error
 				}
 				tr.ItemVariables = append(tr.ItemVariables, r)
 			default:
-				fmt.Println("Unknown Tag Name: %s\n", se.Name.Local)
+				fmt.Printf("Unknown Tag Name: %s\n", se.Name.Local)
 			}
 		}
 	}

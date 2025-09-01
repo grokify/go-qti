@@ -3,6 +3,7 @@ package assessmentitem
 import (
 	"encoding/xml"
 	"fmt"
+
 	"github.com/stmath/go-xmldom"
 )
 

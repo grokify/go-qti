@@ -3,10 +3,11 @@ package assessmenttest
 import (
 	"encoding/xml"
 	"fmt"
-	"github.com/stmath/go-qti"
 	"io"
 	"strconv"
 	"strings"
+
+	"github.com/grokify/go-qti"
 )
 
 // AssessmentSection groups together individual item references or sub sections. GetSectionPart() must be run to populate the items and sub-sections. Implements https://www.imsglobal.org/question/qtiv2p2p2/QTIv2p2p2-ASI-InformationModelv1p0/imsqtiv2p2p2_asi_v1p0_InfoModelv1p0.html#Root_AssessmentSection
@@ -178,7 +179,7 @@ func (as *AssessmentSection) UnmarshalXML(d *xml.Decoder, start xml.StartElement
 				}
 				as.SectionPart = append(as.SectionPart, &r)
 			default:
-				fmt.Println("Unknown Tag Name: %s\n", se.Name.Local)
+				fmt.Printf("Unknown Tag Name: %s\n", se.Name.Local)
 			}
 		}
 	}

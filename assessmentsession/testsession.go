@@ -2,15 +2,17 @@ package assessmentsession
 
 import (
 	"fmt"
-	"github.com/stmath/go-qti"
-	asi "github.com/stmath/go-qti/assessmentitem"
-	asr "github.com/stmath/go-qti/assessmentresult"
-	ast "github.com/stmath/go-qti/assessmenttest"
-	"github.com/stmath/go-xmldom"
-	"golang.org/x/xerrors"
 	"reflect"
 	"strconv"
 	"time"
+
+	"github.com/stmath/go-xmldom"
+	"golang.org/x/xerrors"
+
+	"github.com/grokify/go-qti"
+	asi "github.com/grokify/go-qti/assessmentitem"
+	asr "github.com/grokify/go-qti/assessmentresult"
+	ast "github.com/grokify/go-qti/assessmenttest"
 )
 
 type TestSession struct {

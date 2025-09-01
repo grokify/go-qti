@@ -2,7 +2,8 @@ package assessmentitem
 
 import (
 	"encoding/xml"
-	"github.com/stmath/go-qti"
+
+	"github.com/grokify/go-qti"
 )
 
 type AssessmentItem struct {

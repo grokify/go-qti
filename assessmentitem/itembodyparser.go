@@ -1,8 +1,9 @@
 package assessmentitem
 
 import (
-	"github.com/alediaferia/stackgo"
 	"io"
+
+	"github.com/alediaferia/stackgo"
 )
 
 type tokVal struct {

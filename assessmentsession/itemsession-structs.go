@@ -1,6 +1,6 @@
 package assessmentsession
 
-import "github.com/stmath/go-qti/assessmentitem"
+import "github.com/grokify/go-qti/assessmentitem"
 
 func NewItemSessionFromItem(itm *assessmentitem.AssessmentItem) (*ItemSession, error) {
 	is := &ItemSession{

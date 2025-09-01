@@ -2,7 +2,8 @@ package assessmenttest
 
 import (
 	"encoding/xml"
-	"github.com/stmath/go-qti"
+
+	"github.com/grokify/go-qti"
 )
 
 // Test implements the imsglobal AssessmentTest Class. An assessment test is a group of assessmentItems with an associated set of rules that determine which of the items the candidate sees. https://www.imsglobal.org/question/qtiv2p2p2/QTIv2p2p2-ASI-InformationModelv1p0/imsqtiv2p2p2_asi_v1p0_InfoModelv1p0.html#Root_AssessmentTest

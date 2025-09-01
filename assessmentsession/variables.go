@@ -1,6 +1,6 @@
 package assessmentsession
 
-import "github.com/stmath/go-qti"
+import "github.com/grokify/go-qti"
 
 type Variable interface {
 	GetIdentifier() string

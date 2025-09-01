@@ -4,11 +4,12 @@ import (
 	"encoding/xml"
 	"flag"
 	"fmt"
-	"github.com/stmath/go-qti"
-	"github.com/stmath/go-qti/assessmentitem"
-	asis "github.com/stmath/go-qti/assessmentsession"
-	"io/ioutil"
+	"io"
 	"os"
+
+	"github.com/grokify/go-qti"
+	"github.com/grokify/go-qti/assessmentitem"
+	asis "github.com/grokify/go-qti/assessmentsession"
 )
 
 var (
@@ -34,7 +35,7 @@ func doItem() {
 	}
 	defer inf.Close()
 
-	infd, err := ioutil.ReadAll(inf)
+	infd, err := io.ReadAll(inf)
 	if err != nil {
 		panic(err)
 	}

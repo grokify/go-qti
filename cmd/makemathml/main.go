@@ -4,12 +4,12 @@ import (
 	"crypto/sha1"
 	"flag"
 	"fmt"
-	"github.com/stmath/go-qti"
 	"io"
-	"io/ioutil"
 	"os"
 	"path"
 	"strings"
+
+	"github.com/grokify/go-qti"
 )
 
 var (
@@ -39,7 +39,7 @@ func main() {
 		return
 	}
 
-	fl, err := ioutil.ReadDir(*in)
+	fl, err := os.ReadDir(*in)
 	if err != nil {
 		panic(err)
 	}
@@ -50,7 +50,7 @@ func main() {
 			panic(err)
 		}
 
-		infd, err := ioutil.ReadAll(inf)
+		infd, err := io.ReadAll(inf)
 		if err != nil {
 			panic(err)
 		}

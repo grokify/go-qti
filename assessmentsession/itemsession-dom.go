@@ -4,13 +4,15 @@ import (
 	"encoding/xml"
 	"errors"
 	"fmt"
-	"github.com/stmath/go-qti"
-	"github.com/stmath/go-qti/assessmentitem"
-	asr "github.com/stmath/go-qti/assessmentresult"
-	"github.com/stmath/go-xmldom"
-	"golang.org/x/xerrors"
 	"strconv"
 	"time"
+
+	"github.com/stmath/go-xmldom"
+	"golang.org/x/xerrors"
+
+	"github.com/grokify/go-qti"
+	"github.com/grokify/go-qti/assessmentitem"
+	asr "github.com/grokify/go-qti/assessmentresult"
 )
 
 var (

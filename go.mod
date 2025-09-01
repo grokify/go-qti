@@ -1,4 +1,4 @@
-module github.com/stmath/go-qti
+module github.com/grokify/go-qti
 
 go 1.12
 
