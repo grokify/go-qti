@@ -18,7 +18,7 @@ A Go Library for 1EdTech's Question & Test Interoperability (QTI), formerly Inst
 
 ## Credits
 
-This library was created and open sourced by [ST Math](stmath.com).
+This library was created and open sourced by [Tom Bruno](https://github.com/tebruno99) for [ST Math](https://github.com/stmath).
 
  [build-status-svg]: https://github.com/grokify/go-qti/actions/workflows/ci.yaml/badge.svg?branch=main
  [build-status-url]: https://github.com/grokify/go-qti/actions/workflows/ci.yaml
