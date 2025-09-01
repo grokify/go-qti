@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<assessmentTest xmlns="http://www.imsglobal.org/xsd/imsqti_v2p1" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.imsglobal.org/xsd/imsqti_v2p1 http://www.imsglobal.org/xsd/imsqti_v2p1.xsd" xmlns:m="http://www.w3.org/1998/Math/MathML" identifier="Quiz_Volume_v4_5_1_en" title="Quiz_Volume_v4_5_1_en" language="en" toolName="gen5_to_qti_python_script" toolVersion="1.0">
+	<outcomeDeclaration identifier="SCORE" cardinality="single" baseType="integer">
+		<defaultValue>
+			<value>0</value>
+		</defaultValue>
+	</outcomeDeclaration>
+	<outcomeDeclaration identifier="MAXSCORE" cardinality="single" baseType="integer">
+		<defaultValue>
+			<value>5</value>
+		</defaultValue>
+	</outcomeDeclaration>
+	<outcomeDeclaration identifier="totalScore" cardinality="single" baseType="integer"/>
+	<outcomeDeclaration identifier="testPartFeedback" cardinality="single" baseType="identifier">
+		<defaultValue>
+			<value>always</value>
+		</defaultValue>
+	</outcomeDeclaration>
+	<testPart  identifier="test_part_id_placeholder" navigationMode="linear" submissionMode="individual">
+		<itemSessionControl allowComment="false" maxAttempts="1"/>
+			<assessmentSection identifier="section_id_placeholder" fixed="false" title="section 1" visible="false">
+			<rubricBlock view="candidate"/>
+				<assessmentItemRef identifier="Volume_v4_5_q1_1_en" href="/assessment/item/Volume_v4_5_q1_1_en.xml" fixed="false"/>
+				<assessmentItemRef identifier="Volume_v4_5_q2_1_en" href="/assessment/item/Volume_v4_5_q2_1_en.xml" fixed="false"/>
+				<assessmentItemRef identifier="Volume_v4_5_q3_1_en" href="/assessment/item/Volume_v4_5_q3_1_en.xml" fixed="false"/>
+				<assessmentItemRef identifier="Volume_v4_5_q4_1_en" href="/assessment/item/Volume_v4_5_q4_1_en.xml" fixed="false"/>
+				<assessmentItemRef identifier="Volume_v4_5_q5_1_en" href="/assessment/item/Volume_v4_5_q5_1_en.xml" fixed="false"/>
+		</assessmentSection>
+		<testFeedback access="atEnd" showHide="show" outcomeIdentifier="testPartFeedback" identifier="always">
+			<p> score = <printedVariable identifier="totalScore"/>/<printedVariable identifier="MAXSCORE"/> </p>
+		</testFeedback>
+	</testPart>
+	<outcomeProcessing>
+		<setOutcomeValue identifier="totalScore">
+			<sum>
+				<testVariables variableIdentifier="SCORE"/>
+			</sum>
+		</setOutcomeValue>
+	</outcomeProcessing>
+</assessmentTest>

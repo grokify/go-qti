@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<assessmentItem xmlns="http://www.imsglobal.org/xsd/imsqti_v2p1" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"  xsi:schemaLocation="http://www.imsglobal.org/xsd/imsqti_v2p1 http://www.imsglobal.org/xsd/imsqti_v2p1.xsd"  xmlns:m="http://www.w3.org/1998/Math/MathML" identifier="Volume_v4_5_q5_1_en" title="Volume_v4_5_q5_1_en" toolName="gen5_to_qti_python_script" toolVersion="1.0" adaptive="false" timeDependent="false">
+	<responseDeclaration id="2" identifier="CORRECT_RESPONSE" cardinality="single" baseType="identifier">
+		<correctResponse>
+			<value>a3</value>
+		</correctResponse>
+	</responseDeclaration>
+	<outcomeDeclaration identifier="SCORE" cardinality="single" baseType="integer">
+		<defaultValue>
+			<value>0</value>
+		</defaultValue>
+	</outcomeDeclaration>
+	<outcomeDeclaration identifier="CORRECT_RESPONSE_POINTS" cardinality="single" baseType="integer">
+		<defaultValue>
+			<value>1</value>
+		</defaultValue>
+	</outcomeDeclaration>
+	<itemBody>		<choiceInteraction responseIdentifier="CORRECT_RESPONSE" shuffle="false" maxChoices="1">
+			<prompt>A rectangular solid has a length of 4 inches, a height of 5 inches and a width of 3 inches. What is the volume?</prompt>
+			<simpleChoice identifier="a1">
+				12 cubic inches
+			</simpleChoice>
+			<simpleChoice identifier="a2">
+				28 cubic inches
+			</simpleChoice>
+			<simpleChoice identifier="a3">
+				60 cubic inches
+			</simpleChoice>
+			<simpleChoice identifier="a4">
+				160 cubic inches
+			</simpleChoice>
+		</choiceInteraction>
+	</itemBody>
+	<responseProcessing>
+		<responseCondition>
+			<responseIf>
+				<match>
+					<variable identifier="CORRECT_RESPONSE"/>
+					<correct identifier="CORRECT_RESPONSE"/>
+				</match>
+				<setOutcomeValue identifier="SCORE">
+					<sum>
+						<variable identifier="SCORE"/>
+						<variable identifier="CORRECT_RESPONSE_POINTS"/>
+					</sum>
+				</setOutcomeValue>
+			</responseIf>
+		</responseCondition>
+	</responseProcessing>
+</assessmentItem>
