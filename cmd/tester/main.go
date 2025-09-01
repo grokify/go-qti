@@ -69,7 +69,6 @@ func main() {
 		}
 
 		fmt.Printf("%s", xmlOut)
-
 	} else {
 		panic("No File")
 	}

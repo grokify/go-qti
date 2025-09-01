@@ -115,7 +115,6 @@ func (itm *ItemBody) UpdateImagePath(basePath string) ([]byte, error) {
 			// wasn't an image tag so just keep on going.
 			finalBytes = append(finalBytes, tokval.val...)
 		}
-
 	}
 
 	return finalBytes, nil

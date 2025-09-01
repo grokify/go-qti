@@ -61,7 +61,6 @@ func (ibp *itemBodyParser) parse() error {
 				mode = 1
 			}
 		} else {
-
 			token := &tokVal{tok: tok, val: lit}
 			flipStack.Push(token)
 		}

@@ -60,11 +60,17 @@ func (s *itemBodyScanner) scan() (tok token, lit []byte, err error) {
 		return ctrl_eof, []byte(""), err
 	}
 	if isControl(ch) {
-		s.unread()
-		return s.scanDeliminators()
+		if err := s.unread(); err != nil {
+			return ctrl_eof, []byte(""), err
+		} else {
+			return s.scanDeliminators()
+		}
 	} else {
-		s.unread()
-		return s.scanIdent()
+		if err := s.unread(); err != nil {
+			return ctrl_eof, []byte(""), err
+		} else {
+			return s.scanIdent()
+		}
 	}
 }
 

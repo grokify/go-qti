@@ -46,7 +46,6 @@ func (itm *ItemBody) MathML() ([]string, error) {
 			// wasn't a math tag so keep going
 			finalBytes = append(finalBytes, tokval.val...)
 		}
-
 	}
 
 	return fin, nil

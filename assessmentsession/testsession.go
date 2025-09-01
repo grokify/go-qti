@@ -137,7 +137,6 @@ func (is *TestSession) setOutcomeValue(identifier string, expressionGroup []*xml
 		default:
 			return xerrors.Errorf("Outcome Processing doesn't support %s, Test: %s", eg.Name, is.Test.Identifier)
 		}
-
 	}
 
 	return nil
@@ -222,7 +221,6 @@ func addValue(v1 qti.Value, v2 qti.Value) (qti.Value, error) {
 		}
 		return v3, nil
 	}
-
 }
 
 func (is *TestSession) testVariables(identifier string) []*asr.OutcomeVariable {

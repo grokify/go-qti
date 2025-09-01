@@ -174,7 +174,6 @@ func (is *ItemSession) ProcessResponse(vars []*ResponseSessionVariable) error {
 
 	if is.itm != nil {
 		return is.processResponseITEM(vars)
-
 	} else if is.dom != nil {
 		return is.processResponseDOM(vars)
 	} else {
@@ -299,7 +298,6 @@ func responseCondition(is *ItemSession, condNode *xmldom.Node) error {
 }
 
 func responseRuleGroup(is *ItemSession, node *xmldom.Node) error {
-
 	return nil
 }
 
@@ -335,7 +333,6 @@ func responseIf(is *ItemSession, node *xmldom.Node) (bool, error) {
 				return true, xerrors.Errorf("XML %s: %w", node.XML(), errors.New("shouldn't have reached default switch"))
 			}
 		}
-
 	}
 
 	return true, nil
@@ -353,7 +350,6 @@ func expressionGroup(is *ItemSession, node *xmldom.Node) (bool, error) {
 			args[1] = matchChildren[1]
 			return match(is, args)
 		}
-
 	}
 	return false, nil
 }
@@ -399,7 +395,6 @@ func match(is *ItemSession, nodes [2]*xmldom.Node) (bool, error) {
 func (is *ItemSession) correct(identifier string) (Variable, error) {
 	fmt.Println("Running Get Correct")
 	if is.dom != nil {
-
 		respNodes := is.dom.Root.QueryOne(fmt.Sprintf(`//responseDeclaration[@identifier='%s']`, identifier))
 		if respNodes == nil {
 			return nil, xerrors.Errorf("GetCorrect %s: %w", identifier, ErrorUnknownResponseVariable)
@@ -560,7 +555,6 @@ func sum(is *ItemSession, nodes []*xmldom.Node) (interface{}, string, error) {
 			sum += int(i)
 		}
 		return fmt.Sprintf("%d", sum), "integer", nil
-
 	} else {
 		var sum float64
 		for _, v := range vars {
@@ -574,7 +568,6 @@ func sum(is *ItemSession, nodes []*xmldom.Node) (interface{}, string, error) {
 	}
 
 	return "", "", errors.New("Sum failed to return correctly")
-
 }
 
 func (is *ItemSession) ItemResult() (*asr.ItemResult, error) {
